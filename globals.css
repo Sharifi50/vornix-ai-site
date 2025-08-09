@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables for theming (light/dark) */
+:root{
+  --brand: 173 56% 30%; /* Deep teal green */
+  --brand-fg: 0 0% 100%;
+  --bg: 0 0% 100%;
+  --fg: 222 47% 11%;
+  --muted: 210 17% 98%;
+  --muted-fg: 215 16% 35%;
+  --card: 0 0% 100%;
+  --border: 214 32% 91%;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: 222 47% 7%;
+    --fg: 210 40% 96%;
+    --muted: 222 47% 11%;
+    --muted-fg: 215 20% 78%;
+    --card: 222 47% 9%;
+    --border: 217 33% 17%;
+  }
+}
+
+html { scroll-behavior: smooth; }
+body { background: hsl(var(--bg)); color: hsl(var(--fg)); }
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid hsl(var(--brand));
+  outline-offset: 2px;
+}
+
+/* Typography scale */
+@layer base {
+  h1 { @apply font-display text-4xl md:text-5xl tracking-tight; }
+  h2 { @apply font-display text-3xl md:text-4xl tracking-tight; }
+  h3 { @apply font-display text-2xl md:text-3xl tracking-tight; }
+  p { @apply leading-relaxed; }
+}
+
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}

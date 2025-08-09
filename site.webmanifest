@@ -1,0 +1,14 @@
+{
+  "name": "Vornix.ai",
+  "short_name": "Vornix",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "theme_color": "#0e6b64",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
